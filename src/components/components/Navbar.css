@@ -1,0 +1,53 @@
+.navbar{
+    background-color:gray;
+    height:80px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.nav-menu {
+    background-color: black;
+    width: "150px";
+    height: "100%";
+    display:flex;
+    justify-content: center;
+    position:fixed;
+    top:0;
+    left:-100%;
+
+
+    transition:400ms;
+
+
+
+}
+.nav-menu-items{
+    background-color:darkgray;
+    height:100%;
+    width: 250px;
+}
+
+.nav-text{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    list-style:none;
+    height : 60px;
+   
+}
+.nav-menu.active {
+    left : 0 ;
+    transition : 350ms ;
+    height : "100%";
+
+
+}
+
+.nav-text :hover{
+    background-color:darkblue;
+
+}
+

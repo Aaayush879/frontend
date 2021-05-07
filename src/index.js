@@ -1,26 +1,33 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+
+import CreateBook from './CreateBook';
 import App from './App';
-//import Fb from './Fb';
-//import Register from './Register';
+import Mom from './mom';
+import Fb from './Fb';
+import Register from './Register';
 import Header from './components/Header';
 import Layout from './components/Layout';
 import BootstrapCarouselComponent from './components/components/BootstrapCarouselComponent.js'
 
-
-
-
 import  "bootstrap/dist/css/bootstrap.min.css";
-
-
 //import reportWebVitals from './reportWebVitals'
+
 
 
 
 ReactDOM.render(
   <React.StrictMode>
-   <App/>
+    
+    <Mom/>
+    
+
+    
+  
+   
+   
+  
       
     
 

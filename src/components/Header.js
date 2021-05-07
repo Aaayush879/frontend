@@ -16,8 +16,8 @@ const Header =()=>{
     
     return(
         <Navbar
-        collapseOnSelect
-        bg="success" expand="md"
+        
+        bg="success" 
         >
             <Navbar.Brand>
                 <img src={Lofo} alt="logo" width="100px" height="75px"/>
@@ -28,6 +28,8 @@ const Header =()=>{
              <Navbar.Collapse id="basic-navbar-nav">
                  <Nav className="ml-auto" >
                      <LinkContainer exact to="/"><Nav.Link>Home</Nav.Link></LinkContainer>
+                     <LinkContainer to="/admin"><Nav.Link>admin</Nav.Link></LinkContainer>
+                     
                      <LinkContainer to="/Skin Care"><Nav.Link>skincare</Nav.Link></LinkContainer>
                       <LinkContainer to="/Color"><Nav.Link>Color</Nav.Link></LinkContainer>
                      <LinkContainer to="/Wellness"><Nav.Link>Wellness</Nav.Link></LinkContainer>

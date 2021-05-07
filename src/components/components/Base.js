@@ -2,6 +2,8 @@ import React from 'react';
 import {Jumbotron } from 'react-bootstrap';
 import './Base.css';
 import {Button} from 'react-bootstrap'
+import color from './Color';
+
 
 
 
@@ -9,16 +11,18 @@ import {Button} from 'react-bootstrap'
 import Wellness from './Wellness';
 
 const Base=(props) =>{
-    return<div>
-        <div className="my bg-info text-center text-light"style={{borderRadius:"10%" , width:"340px" , height:"400px" , borderRadius:"10px"}}>
+    
+    
+    return<div >
+        <div className="my bg-light  text-center text-dark d-block w-100 outline-primary " style={{borderRadius:"10%"  , borderRadius:"10px" }}>
         <br/>
-        <img src ={props.imgsrc} style={{width:"200px",height:"200px" , marginLeft:"20px" ,marginRight:"20px"}}/>
-        <br/><br/>
+        <img className="as" src ={props.imgsrc} style={{width:"60%",height:"55%" , marginLeft:"20px" ,marginRight:"20px"  , borderRadius:"10px"}}/>
+        <br/>
         
-        <h6 style={{textAlign:"CENTER" }}>{props.texxt}</h6><br/>
-        <h6 style={{textAlign:"CENTER" }}>{props.title}</h6>
+        <h6 className="a"style={{textAlign:"CENTER" ,width:"auto" , justifyContent:"center" }}>{props.texxt}</h6>
+        <h6 className="s"style={{textAlign:"CENTER" , width:"auto" ,  justifyContent:"center"}}>{props.title}</h6>
         <br/>
-        <Button className="btn-success btn-outline-primary">See More</Button>
+        <Button className="btn-success btn-outline-primary" style={{width:"65%"}} Link={color}>More</Button>
         <br/><br/>
         </div>
     </div>

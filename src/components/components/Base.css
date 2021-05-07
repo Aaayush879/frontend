@@ -1,4 +1,19 @@
-.my{
+.my:hover{
+    
     box-shadow: 0px 0px 15px  black;
-
+    background:blanchedalmond;
+}
+.as:hover{
+    box-shadow: 0px 0px 9px black;
+    height:65px;
+    width: 65px;
+    size: 0em;
+}
+.a:hover{
+    font-size: 20px;
+    font-family: 'Times New Roman';
+}
+.s:hover{
+    font-size: 30px;
+    font-family: 'Times New Roman';
 }

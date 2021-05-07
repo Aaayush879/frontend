@@ -32,7 +32,7 @@ class BootstrapCarouselComponent extends React.Component {
                                     />
                                     <Carousel.Caption>
                                         <h3 className="text-info">First slide label</h3>
-                                        <p className="text-info">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                                        <p className="text-info">product 1</p>
                                     </Carousel.Caption>
                                 </Carousel.Item>
 
@@ -45,7 +45,7 @@ class BootstrapCarouselComponent extends React.Component {
 
                                     <Carousel.Caption>
                                         <h3 className="text-info">Second slide label</h3>
-                                        <p className="text-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                        <p className="text-info">product 2</p>
                                     </Carousel.Caption>
                                 </Carousel.Item>
 
@@ -57,7 +57,7 @@ class BootstrapCarouselComponent extends React.Component {
                                     />
                                     <Carousel.Caption>
                                         <h3> className="text-info"Third slide label</h3>
-                                        <p className="text-info">Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                                        <p className="text-info">product 3</p>
                                     </Carousel.Caption>
                                 </Carousel.Item>
 

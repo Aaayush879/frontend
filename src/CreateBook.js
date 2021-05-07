@@ -1,46 +1,58 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import {Jumbotron,Form,Button , Row , Col} from 'react-bootstrap';
-import PropeTypes from 'prop-types';
-import './add-new-ticket.css'
-import Axios from 'axios';
 
-
-class TicketForm extends React.Component
-{
-    state={
-        subject:'',
-        date:'',
-        detail:''
-    }
-    handleChange=(e)=>{
-        console.log(e.target.name);
-        console.log(e.target.value);
-        this.setState({[e.target.name]:e.target.value})
-    }
-    handleSubmit=()=>{
-        if (this.setState.subject!='' && this.setState.date!='' , this.setState!='')
-        {
-            Axios.post('http://localhost:6000/Query',this.state)
-            .then(res=>{
-                console.log('query submitted');
-                console.log(this.state);
-                this.setState({subject:'', date:'',detail:''});
-            });
-        }
-
-    }
+import axios from 'axios';
+import './create-book.css';
 
 
 
+class CreateBook extends Component {
+  constructor() {
+    super();
+    this.state = {
+      subject:"",
+      date:"",
+      query:""
+    };
+  }
 
-    render()
+  onChange = e => {
+    this.setState({ [e.target.name]: e.target.value });
+  };
+
+  onSubmit = e => {
+    e.preventDefault();
+
+    const data = {
+      subject: this.state.subject,
+      date:this.state.date,      
+      query: this.state.query
+    };
+
+    axios
+      .post('http://localhost:2000/items', data)
+      .then(res => {
+        this.setState({
+          subject:"",
+          date:"",
+          query:""
+        })
+        this.props.history.push('/');
+      })
+      .catch(err => {
+        console.log("Error in CreateBook!");
+      })
+  };
+
+  render()
     {
         return(
             <div className="ms bg-info" style={{display:"flex" ,justifyContent:"center" , alignItems:"center" }}>
                 <Jumbotron className="mt-3 add-new-ticket bg-light" style={{  width:"70%"}}>
             <h1 className="text-center text-success">ANY QUERY ??</h1>
             <hr/>
-            <Form autoComplete="off" onSubmit={()=>this.handleSubmit()} >
+            <Form autoComplete="off" noValidate onSubmit={this.onSubmit} >
                 <Form.Group as={Row}>
                     <Form.Label column sm={3} style={{fontSize:"20px"}}>Email</Form.Label>
                     <Col sm={9}>
@@ -48,8 +60,8 @@ class TicketForm extends React.Component
                     name="subject"
                     
                     placeholder="subject"
-                    value={this.setState.subject}
-                    onChange={(e)=>{this.handleChange(e)}}
+                    value={this.state.subject}
+                    onChange={this.onChange}
                     required
                     /></Col>
                 </Form.Group>
@@ -60,21 +72,21 @@ class TicketForm extends React.Component
                     width="25%"
                     name="date"
                     type="date"
-                    value= {this.setState.date}
+                    value= {this.state.date}
                     placeholder="date"
-                    onChange={(e)=>{this.handleChange(e)}}
+                    onChange={this.onChange}
                     required
                     /></Col>
                 </Form.Group>
                 <Form.Group>
                     <Form.Label style={{marginLeft:"250px" , fontSize:"30px"}}>Query</Form.Label>
                     <Form.Control
-                    name="detail"
+                    name="query"
                     as="textarea"
-                    value={this.setState.detail}
+                    value={this.state.query}
                     placeholder="enter your QUERY"
                     row="5"
-                    onChange={(e)=>{this.handleChange(e)}}
+                    onChange={this.onChange}
                     required
                     />
                 </Form.Group>
@@ -85,6 +97,5 @@ class TicketForm extends React.Component
         )
     }
 }
-export default TicketForm;
 
-
+export default CreateBook;

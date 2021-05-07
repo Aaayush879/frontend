@@ -13,6 +13,7 @@ import BootstrapCarouselComponent from './components/components/BootstrapCarouse
 
 import  "bootstrap/dist/css/bootstrap.min.css";
 //import reportWebVitals from './reportWebVitals'
+import LogoImage from './new.jpg';
 
 
 
@@ -20,7 +21,9 @@ import  "bootstrap/dist/css/bootstrap.min.css";
 ReactDOM.render(
   <React.StrictMode>
     
-    <Mom/>
+    <div style={{height:"100%", width:"100%" , textAlign:"center" ,backgroundImage: `url(${LogoImage})` , backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundPosition: "center"}}>
+      <Mom/>
+    </div>
     
 
     

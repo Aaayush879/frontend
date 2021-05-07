@@ -4,7 +4,7 @@ import LogoImage from './new.jpg';
 import './mom.css'
 
 const mom=()=>{
-    return<div style={{ width:"100%", height:"150vh" , textAlign:"center" ,backgroundImage: `url(${LogoImage})` , backgroundRepeat:"no-repeat", backgroundSize:"Cover", backgroundPosition: "center"}}>
+    return<div>
         <div className="sap text-success text-center" >
             <h1>Happy Mothers Day Mummy</h1>
         </div>

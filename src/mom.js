@@ -13,7 +13,7 @@ const mom=()=>{
         <Present/>
         </div>
 
-        <div className="text-center text-white " style={{widht:"100%" , height:"8%" , backgroundColor:"black" , marginBottom:"10px"}}>
+        <div className="text-center text-white " style={{widht:"100%" , height:"8%" , backgroundColor:"black" , marginBottom:"2%"}}>
             <h3>Made by me</h3>
 
         </div>

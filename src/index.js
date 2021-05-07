@@ -21,7 +21,7 @@ import LogoImage from './new.jpg';
 ReactDOM.render(
   <React.StrictMode>
     
-    <div style={{height:"100%", width:"100%" , textAlign:"center" ,backgroundImage: `url(${LogoImage})` , backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundPosition: "center"}}>
+    <div style={{height:"105vh", width:"100%" , textAlign:"center" ,backgroundImage: `url(${LogoImage})` , backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundPosition: "center"}}>
       <Mom/>
     </div>
     

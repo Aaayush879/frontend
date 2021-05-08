@@ -1,7 +1,7 @@
 import React from 'react';
 import Present from './present';
 import LogoImage from './new.jpg';
-import './mom.css'
+
 
 const mom=()=>{
     return<div>
@@ -9,7 +9,7 @@ const mom=()=>{
             <h1>Happy Mothers Day Mummy</h1>
         </div>
         
-        <div className="are" style={{ alignItems:"center", alignContent:"justify" , marginBottom:"25%" , marginLeft:"30%" , borderRadius:"20%"}}>
+        <div className="are" style={{height:"65%", width:"48%" ,alignItems:"center", alignContent:"justify" , marginLeft:"30%" , borderRadius:"20%"}}>
         <Present/>
         </div>
 
